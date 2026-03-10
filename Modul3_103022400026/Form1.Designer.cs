@@ -37,6 +37,8 @@
             label2 = new Label();
             label3 = new Label();
             textBox1 = new TextBox();
+            label4 = new Label();
+            comboBox2 = new ComboBox();
             SuspendLayout();
             // 
             // textBox2
@@ -65,6 +67,7 @@
             button1.TabIndex = 8;
             button1.Text = "Convert";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // contextMenuStrip1
             // 
@@ -107,11 +110,32 @@
             textBox1.Size = new Size(271, 31);
             textBox1.TabIndex = 12;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(39, 189);
+            label4.Name = "label4";
+            label4.Size = new Size(112, 25);
+            label4.TabIndex = 13;
+            label4.Text = "Satuan Akhir";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Celcius", "Frenheit", "Kelvin", "Reamur" });
+            comboBox2.Location = new Point(39, 235);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(182, 33);
+            comboBox2.TabIndex = 14;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox2);
+            Controls.Add(label4);
             Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -135,5 +159,7 @@
         private Label label2;
         private Label label3;
         private TextBox textBox1;
+        private Label label4;
+        private ComboBox comboBox2;
     }
 }
